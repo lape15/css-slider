@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+
+.slider-wrap {
+  display: block;
+  position: relative;
+}
+
+.slide-controls {
+  position: absolute;
+  z-index: 80;
+  left: 25px;
+  top: 28vh;
+  padding: 10px;
+  display: block;
+}
+.slide-controls > button {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.slide-controls > button > .fas {
+  color: grey;
+  font-size: 24px;
+}
+
+.slide-controls > button.prev {
+  margin-bottom: 20px;
+}
+.slide-controls > button.next {
+  margin-top: 35px;
+}
+
+.slide.one {
+  background: url(../assets/lightning-1056419_1920.jpg) no-repeat;
+  display: block;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease-out;
+}
+
+.slide.two {
+  background: url(../assets/landscape-5363681_1920.jpg) no-repeat;
+  transition: all 0.3s ease-out;
+}
+
+.slide.three {
+  background: url(../assets//natural-wonders-1400924.jpg) no-repeat;
+  transition: all 0.3s ease-out;
+}
+
+.slide {
+  height: 550px;
+  padding: 55px 105px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  top: -550px;
+}
+
+h2 {
+  line-height: 78px;
+  font-weight: 600;
+  font-size: 70px;
+  margin: 5px;
+  padding: 5px;
+  margin-top: 30px;
+  word-spacing: 1px;
+  opacity: 100;
+  transition: all 0.5s ease-out 1s;
+  transform: translateY(20px);
+  font-family: "Lato", sans-serif;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 37px;
+  outline: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 30px;
+  transform: translateY(20px);
+  opacity: 100;
+  transition: all 0.7s ease-out 2s;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+.slide-dots {
+  position: absolute;
+  width: 100px;
+  z-index: 80;
+  bottom: 55vh;
+  right: 4px;
+  display: block;
+  text-align: center;
+}
+
+.slide-dots .dot {
+  width: 5px;
+  color: #000;
+  background-color: #f2f2f2;
+  padding: 5px;
+  margin: 14px;
+  line-height: 27px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.slide-dots .dot.active {
+  background-color: grey;
+}
+.menu-box {
+  border: 2px solid red;
+  position: absolute;
+  right: 0;
+  width: 400px;
+}
