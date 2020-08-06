@@ -4,8 +4,10 @@ let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const btns = document.querySelectorAll(".btn");
-
 const texts = document.querySelectorAll(".text");
+const menuBtn = document.querySelector(".menu-btn");
+const hamburger = document.querySelector(".burger");
+let showMenu = false;
 
 const slideImage = (n) => {
   slides.forEach((slide, index) => {
@@ -46,3 +48,18 @@ dots.forEach((dot, i) => {
     currentSlide = i;
   });
 });
+
+menuBtn.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+  console.log("clicked");
+  if (!showMenu) {
+    hamburger.classList.add("open");
+    showMenu = true;
+    menuBtn.classList.add("right");
+  } else {
+    hamburger.classList.remove("open");
+    menuBtn.classList.remove("right");
+    showMenu = false;
+  }
+}
