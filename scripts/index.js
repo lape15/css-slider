@@ -17,7 +17,8 @@ const box6 = document.querySelector(".contact");
 
 const slideImage = (n) => {
   slides.forEach((slide, index) => {
-    slide.style.top = "-575px";
+    slide.classList.add("hide-slide");
+
     dots.forEach((dot, index) => {
       dot.classList.remove("active");
     });
@@ -30,7 +31,7 @@ const slideImage = (n) => {
       btn.style.opacity = "0";
     });
   });
-  slides[n].style.top = "0";
+  slides[n].classList.remove("hide-slide");
   dots[n].classList.add("active");
   texts[n].style.opacity = "100";
   texts[n].style.transform = "translateY(20px)";
@@ -63,6 +64,8 @@ function toggleMenu() {
     hamburger.classList.add("open");
     showMenu = true;
     menuBtn.classList.add("right");
+
+    // menuBtn.style.background = "rgba(229, 234, 249, 0.4)";
     box1.classList.add("shrink");
     box1.classList.remove("open");
     box2.classList.add("shrink-one");
@@ -75,7 +78,7 @@ function toggleMenu() {
     menuBtn.classList.remove("right");
     showMenu = false;
     box1.classList.remove("shrink");
-    box1.classList.add("open");
+
     box2.classList.remove("shrink-one");
     box3.classList.remove("shrink-two");
     box4.classList.remove("shrink-three");
