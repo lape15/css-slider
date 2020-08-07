@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
@@ -45,35 +45,36 @@
 }
 
 .slide.one {
-  background: url(../assets/love-5426977_1920.jpg) no-repeat;
-  display: block;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  transition: all 0.3s ease-out;
+  background: url(../assets/love-5426977_1920.jpg) no-repeat center;
 }
 
 .slide.two {
-  background: url(../assets/funny.jpg) no-repeat;
-  transition: all 0.3s ease-out;
-  object-fit: cover;
+  background: url(../assets/lake.jpg) no-repeat center;
 }
 
 .slide.three {
-  background: url(../assets//natural-wonders-1400924.jpg) no-repeat;
-  transition: all 0.3s ease-out;
+  background: url(../assets/sun.jpg) no-repeat center;
 }
 
 .slide {
-  height: 550px;
+  height: 520px;
   padding: 55px 105px;
   position: absolute;
   right: 0;
-  top: 0;
   left: 0;
   bottom: 0;
-  top: -550px;
+  top: 0;
+  transform: translateY(-520px);
+}
+.active-slide {
+  transform: translateY(0);
+  transition: all 0.45s ease-out;
+}
+
+.after-active-slide {
+  top: -580px;
+
+  transition: all 0.45s ease-in;
 }
 
 h2 {
@@ -85,10 +86,11 @@ h2 {
   margin-top: 30px;
   word-spacing: 1px;
   opacity: 100;
-  transition: all 0.5s ease-out 1s;
-  transform: translateY(20px);
+  transition: all 0.5s ease-out 0.5s;
   font-family: "Lato", sans-serif;
   color: #fff;
+  transform: translateY(10px);
+  opacity: 100;
 }
 
 .btn {
@@ -99,13 +101,15 @@ h2 {
   letter-spacing: 1px;
   font-weight: 500;
   margin-top: 30px;
-  transform: translateY(20px);
+  transform: translateY(50px);
   opacity: 100;
-  transition: all 0.7s ease-out 2s;
+  transition: all 0.7s ease-out 0.8s;
+  transform: translateY(20px);
   background-color: transparent;
   color: #000;
   font-family: "Lato", sans-serif;
   cursor: pointer;
+  opacity: 100;
 }
 
 .btn:hover {
@@ -141,7 +145,6 @@ h2 {
   background-color: grey;
 }
 .menu-box {
-  border: 2px solid red;
   position: absolute;
   right: 0;
   width: 470px;
@@ -159,9 +162,9 @@ h2 {
   cursor: pointer;
   border-radius: 17px;
   border: 1px solid #f2f2f2;
-  background: #f2f2f2;
+  background: linear-gradient(to right, #db929d, #f2f2f2);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.1s ease-out;
+  transition: all 0.3s ease-out 0.8s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,8 +172,8 @@ h2 {
 }
 
 .right {
-  transform: translate(-90px, 0);
-  transition: all 0.1s ease-in;
+  transform: translate(-210px, 0);
+  transition: all 0.1s ease-in-out;
   transform-origin: center;
 }
 .menu-box .menu-btn {
@@ -193,8 +196,8 @@ h2 {
   transition: all 0.5s ease-in;
 }
 .menu-box .menu-btn .burger {
-  background-color: #000;
-  width: 28px;
+  background-color: #fff;
+  width: 25px;
   height: 3px;
   position: absolute;
   right: 8px;
