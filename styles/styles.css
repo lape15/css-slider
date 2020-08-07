@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-color: red;
+  background-color: white;
 }
 .wrapper {
   height: 90vh;
@@ -158,30 +158,6 @@ h2 {
   bottom: 45px;
   right: 60px;
   height: 45px;
-  width: 50px;
-  padding: 8px 5px;
-  cursor: pointer;
-  border-radius: 17px;
-  border: 1px solid #f2f2f2;
-  background: linear-gradient(to right, #db929d, #f2f2f2);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: center;
-}
-
-/* .right {
-  transform: translate(-210px, 0);
-  transition: all 0.1s ease-in-out;
-  transform-origin: center;
-} */
-.menu-box .menu-btn {
-  position: absolute;
-  bottom: 45px;
-  right: 60px;
-  height: 45px;
   width: 45px;
   display: flex;
   justify-content: center;
@@ -190,15 +166,17 @@ h2 {
   cursor: pointer;
   border-radius: 17px;
   border: 1px solid #f2f2f2;
-  background: #db929d;
+  background: linear-gradient(to right, #db929d, #fff);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
   transition: all 0.5s cubic-bezier(0.76, 0.91, 0.03, 0.18) 0.9s;
 }
 
 .right {
   transform: translate(-220px, 0);
-  transition: all 0.001s cubic-bezier(0.76, 0.91, 0.03, 0.18);
+
   transform-origin: center;
+
+  transition: all 0.001s cubic-bezier(0.76, 0.91, 0.03, 0.18);
 }
 .menu-box .menu-btn .burger {
   background-color: #fff;
@@ -230,22 +208,24 @@ h2 {
 }
 
 .menu-box .menu-btn .open {
-  background: rgba(0, 0, 0, 0);
-  transform: rotate(720deg) translate(-50px, 0);
-  transition: all 0.8s ease-in-out 2s;
+  background: transparent;
+  transform: rotate(3240deg) translate(0, -50%);
+  transition: all 0.9s ease-in-out 2s;
   transform-origin: center;
 }
 .menu-box .menu-btn .open::before {
-  transform: rotate(405deg) translate(35px, -35px);
-  transition: all 0.8s ease-in-out 2s;
+  transition: all 0.9s ease-in-out 2s;
   transform-origin: center;
+  top: 0;
+  transform: rotate(45deg);
   background-color: #000;
 }
 
 .menu-box .menu-btn .open::after {
-  transform: rotate(-405deg) translate(35px, 35px);
-  transition: all 0.8s ease-in-out 2s;
+  transition: all 0.9s ease-in-out 2s;
   transform-origin: center;
+  top: 0;
+  transform: rotate(135deg);
   background-color: #000;
 }
 
@@ -311,34 +291,34 @@ h2 {
 .shrink {
   transform: translate(0, 50px);
   transform-origin: center;
-  transition: all 1s ease 3s;
+  transition: all 1s ease 2s;
 }
 
 .shrink-one {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 3.2s;
+  transition: 0.3s ease 2.2s;
 }
 
 .shrink-two {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 3.5s;
+  transition: 0.3s ease 2.5s;
 }
 
 .shrink-three {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 3.7s;
+  transition: 0.3s ease 2.7s;
 }
 .shrink-four {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 3.8s;
+  transition: 0.3s ease 2.8s;
 }
 
 .shrink-five {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 3.9s;
+  transition: 0.3s ease 2.9s;
 }
