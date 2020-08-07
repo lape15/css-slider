@@ -4,10 +4,13 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+body {
+  background-color: red;
+}
 .wrapper {
   height: 90vh;
   position: relative;
+  height: calc(100vh - 80px);
 }
 
 .slider-wrap {
@@ -45,35 +48,37 @@
 }
 
 .slide.one {
-  background: url(../assets/love-5426977_1920.jpg) no-repeat center;
+  background: url(../assets/mert-kahveci-s99d0y-YteE-unsplash.jpg) no-repeat
+    center;
+  display: block;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 1s cubic-bezier(1, 0.29, 0.77, 0.76);
 }
 
 .slide.two {
   background: url(../assets/lake.jpg) no-repeat center;
+  transition: all 1s cubic-bezier(1, 0.29, 0.77, 0.76);
 }
 
 .slide.three {
   background: url(../assets/sun.jpg) no-repeat center;
+  transition: all 1s cubic-bezier(1, 0.29, 0.77, 0.76);
 }
 
 .slide {
-  height: 580px;
+  height: 575px;
   padding: 55px 105px;
   position: absolute;
   right: 0;
+  top: 0;
   left: 0;
   bottom: 0;
-  top: 0;
+  background-size: 100%;
+  transition: all 0.9s cubic-bezier(1, 0.29, 0.99, 0.54);
 }
-/* .active-slide {
-  transform: translateY(0);
-  transition: all 0.45s ease-out;
-}
-
-.after-active-slide {
-  top: -580px;
-transition: all 0.45s ease-in;
-} */
 
 h2 {
   line-height: 78px;
@@ -84,11 +89,10 @@ h2 {
   margin-top: 30px;
   word-spacing: 1px;
   opacity: 100;
-  transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1s;
+  transform: translateY(20px);
   font-family: "Lato", sans-serif;
   color: #fff;
-  transform: translateY(10px);
-  opacity: 100;
 }
 
 .btn {
@@ -99,15 +103,14 @@ h2 {
   letter-spacing: 1px;
   font-weight: 500;
   margin-top: 30px;
-  transform: translateY(50px);
-  opacity: 100;
-  transition: all 0.7s ease-out 0.8s;
   transform: translateY(20px);
+  opacity: 100;
+  transition: all 0.7s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
   background-color: transparent;
-  color: #000;
+  color: #fff;
+
   font-family: "Lato", sans-serif;
   cursor: pointer;
-  opacity: 100;
 }
 
 .btn:hover {
@@ -140,7 +143,7 @@ h2 {
 }
 
 .slide-dots .dot.active {
-  background-color: grey;
+  background-color: #db929d;
 }
 .menu-box {
   position: absolute;
@@ -189,28 +192,28 @@ h2 {
   border: 1px solid #f2f2f2;
   background: #db929d;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.5s ease-in 0.9s;
+  transition: all 0.5s cubic-bezier(0.76, 0.91, 0.03, 0.18) 0.9s;
 }
 
 .right {
   transform: translate(-220px, 0);
-  transition: all 0.1s ease-in;
+  transition: all 0.001s cubic-bezier(0.76, 0.91, 0.03, 0.18);
   transform-origin: center;
 }
 .menu-box .menu-btn .burger {
   background-color: #fff;
-  width: 25px;
-  height: 3px;
+  width: 22px;
+  height: 2px;
   transition: all 0.5s ease-out 0.5s;
 }
 
 .menu-box .menu-btn .burger::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 3px;
+  width: 22px;
+  height: 2px;
   background-color: #fff;
-  transform: translateY(-9px);
+  transform: translateY(-7px);
   transition: all 0.5s ease-out 0.5s;
   transform-origin: center;
 }
@@ -218,30 +221,30 @@ h2 {
 .menu-box .menu-btn .burger::after {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 3px;
+  width: 22px;
+  height: 2px;
   background-color: #fff;
-  transform: translateY(9px);
+  transform: translateY(7px);
   transition: all 0.5s ease-out 0.5s;
   transform-origin: center;
 }
 
 .menu-box .menu-btn .open {
-  transform: rotate(1260deg) translate(-50px, 0);
-  background-color: transparent;
-  transition: all 1.5s ease-in-out 0.8s;
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(720deg) translate(-50px, 0);
+  transition: all 0.8s ease-in-out 2s;
   transform-origin: center;
 }
 .menu-box .menu-btn .open::before {
-  transform: rotate(45deg) translate(35px, -35px);
-  transition: all 1.5s ease-in-out 0.8s;
+  transform: rotate(405deg) translate(35px, -35px);
+  transition: all 0.8s ease-in-out 2s;
   transform-origin: center;
   background-color: #000;
 }
 
 .menu-box .menu-btn .open::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-  transition: all 1.5s ease-in-out 0.8s;
+  transform: rotate(-405deg) translate(35px, 35px);
+  transition: all 0.8s ease-in-out 2s;
   transform-origin: center;
   background-color: #000;
 }
@@ -308,34 +311,34 @@ h2 {
 .shrink {
   transform: translate(0, 50px);
   transform-origin: center;
-  transition: all 1s ease 1s;
+  transition: all 1s ease 3s;
 }
 
 .shrink-one {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.5s;
+  transition: 0.3s ease 3.2s;
 }
 
 .shrink-two {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.7s;
+  transition: 0.3s ease 3.5s;
 }
 
 .shrink-three {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.9s;
+  transition: 0.3s ease 3.7s;
 }
 .shrink-four {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 2s;
+  transition: 0.3s ease 3.8s;
 }
 
 .shrink-five {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 2.1s;
+  transition: 0.3s ease 3.9s;
 }

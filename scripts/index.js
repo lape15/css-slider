@@ -17,7 +17,7 @@ const box6 = document.querySelector(".contact");
 
 const slideImage = (n) => {
   slides.forEach((slide, index) => {
-    slide.style.top = "-580px";
+    slide.style.top = "-575px";
     dots.forEach((dot, index) => {
       dot.classList.remove("active");
     });
