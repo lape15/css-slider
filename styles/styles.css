@@ -57,25 +57,23 @@
 }
 
 .slide {
-  height: 520px;
+  height: 580px;
   padding: 55px 105px;
   position: absolute;
   right: 0;
   left: 0;
   bottom: 0;
   top: 0;
-  transform: translateY(-520px);
 }
-.active-slide {
+/* .active-slide {
   transform: translateY(0);
   transition: all 0.45s ease-out;
 }
 
 .after-active-slide {
   top: -580px;
-
-  transition: all 0.45s ease-in;
-}
+transition: all 0.45s ease-in;
+} */
 
 h2 {
   line-height: 78px;
@@ -164,18 +162,18 @@ h2 {
   border: 1px solid #f2f2f2;
   background: linear-gradient(to right, #db929d, #f2f2f2);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease-out 0.8s;
+  transition: all 0.3s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
   transform-origin: center;
 }
 
-.right {
+/* .right {
   transform: translate(-210px, 0);
   transition: all 0.1s ease-in-out;
   transform-origin: center;
-}
+} */
 .menu-box .menu-btn {
   position: absolute;
   bottom: 45px;
@@ -191,58 +189,59 @@ h2 {
   border: 1px solid #f2f2f2;
   background: #db929d;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.15s ease-in;
+  transition: all 0.5s ease-in 0.9s;
 }
 
 .right {
-  transform: translate(-100px, 0);
-  transition: all 0.5s ease-in;
+  transform: translate(-220px, 0);
+  transition: all 0.1s ease-in;
+  transform-origin: center;
 }
 .menu-box .menu-btn .burger {
   background-color: #fff;
   width: 25px;
   height: 3px;
-  transition: all 0.15s ease-out;
+  transition: all 0.5s ease-out 0.5s;
 }
 
 .menu-box .menu-btn .burger::before {
   content: "";
   position: absolute;
-  width: 28px;
+  width: 25px;
   height: 3px;
   background-color: #fff;
   transform: translateY(-9px);
-  transition: all 0.45s ease-out;
+  transition: all 0.5s ease-out 0.5s;
   transform-origin: center;
 }
 
 .menu-box .menu-btn .burger::after {
   content: "";
   position: absolute;
-  width: 28px;
+  width: 25px;
   height: 3px;
   background-color: #fff;
   transform: translateY(9px);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out 0.5s;
   transform-origin: center;
 }
 
 .menu-box .menu-btn .open {
-  transform: rotate(180deg) translate(-50px, 0);
+  transform: rotate(1260deg) translate(-50px, 0);
   background-color: transparent;
-  transition: all 0.5s ease-in-out 0.6s;
+  transition: all 1.5s ease-in-out 0.8s;
   transform-origin: center;
 }
 .menu-box .menu-btn .open::before {
   transform: rotate(45deg) translate(35px, -35px);
-  transition: all 0.5s ease-in-out 0.7s;
+  transition: all 1.5s ease-in-out 0.8s;
   transform-origin: center;
   background-color: #000;
 }
 
 .menu-box .menu-btn .open::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  transition: all 0.5s ease-in-out 0.8s;
+  transition: all 1.5s ease-in-out 0.8s;
   transform-origin: center;
   background-color: #000;
 }
@@ -309,40 +308,34 @@ h2 {
 .shrink {
   transform: translate(0, 50px);
   transform-origin: center;
-  transition: all 1s ease 0.9s;
-}
-
-.top {
-  transform: translate(0, -1300px);
-  transform-origin: center;
   transition: all 1s ease 1s;
 }
 
 .shrink-one {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1s;
+  transition: 0.3s ease 1.5s;
 }
 
 .shrink-two {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.3s;
+  transition: 0.3s ease 1.7s;
 }
 
 .shrink-three {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.5s;
+  transition: 0.3s ease 1.9s;
 }
 .shrink-four {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.7s;
+  transition: 0.3s ease 2s;
 }
 
 .shrink-five {
   transform: scale(1) translate(0, 49px);
   transform-origin: center;
-  transition: 0.3s ease 1.9s;
+  transition: 0.3s ease 2.1s;
 }

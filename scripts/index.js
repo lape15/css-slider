@@ -17,26 +17,25 @@ const box6 = document.querySelector(".contact");
 
 const slideImage = (n) => {
   slides.forEach((slide, index) => {
-    slide.classList.add("active-slide");
+    slide.style.top = "-580px";
     dots.forEach((dot, index) => {
-      dot.classList.add("active");
+      dot.classList.remove("active");
     });
     texts.forEach((text, index) => {
-      text.style.opacity = "100";
-      text.style.transform = "translateY(10px)";
+      text.style.opacity = "0";
+      text.style.transform = "translateY(70px)";
     });
     btns.forEach((btn, index) => {
-      btn.style.transform = "translateY(20px)";
-      btn.style.opacity = "100";
+      btn.style.transform = "translateY(40px)";
+      btn.style.opacity = "0";
     });
   });
-  slides[n].classList.remove("active-slide");
-
+  slides[n].style.top = "0";
   dots[n].classList.add("active");
-  texts[n].style.opacity = "0";
-  texts[n].style.transform = "translateY(10px)";
+  texts[n].style.opacity = "100";
+  texts[n].style.transform = "translateY(20px)";
   btns[n].style.transform = "translateY(20px)";
-  btns[n].style.opacity = "0";
+  btns[n].style.opacity = "100";
 };
 
 prev.addEventListener("click", () => {
