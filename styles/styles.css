@@ -182,36 +182,33 @@ h2 {
   right: 60px;
   height: 45px;
   width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 5px;
   cursor: pointer;
   border-radius: 17px;
   border: 1px solid #f2f2f2;
-  background: #f2f2f2;
+  background: #db929d;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
   transition: all 0.15s ease-in;
 }
 
 .right {
-  transform: translate(-80px, 0);
+  transform: translate(-100px, 0);
   transition: all 0.5s ease-in;
 }
 .menu-box .menu-btn .burger {
   background-color: #fff;
   width: 25px;
   height: 3px;
-  position: absolute;
-  right: 8px;
-  top: 12px;
   transition: all 0.15s ease-out;
 }
 
 .menu-box .menu-btn .burger::before {
   content: "";
   position: absolute;
-  top: 15px;
-  right: 0;
   width: 28px;
-  left: 1px;
   height: 3px;
   background-color: #fff;
   transform: translateY(-9px);
@@ -222,9 +219,6 @@ h2 {
 .menu-box .menu-btn .burger::after {
   content: "";
   position: absolute;
-  top: 8px;
-  right: 0;
-  left: 1px;
   width: 28px;
   height: 3px;
   background-color: #fff;
