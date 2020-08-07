@@ -96,8 +96,7 @@ img {
 }
 
 .slide.one {
-  background: url(../assets/mert-kahveci-s99d0y-YteE-unsplash.jpg) no-repeat
-    center;
+  background: url(../assets/man.jpg) no-repeat center;
   transition: all 0.55s cubic-bezier(0.7, 0.44, 0.58, 1);
   z-index: 3;
 }
@@ -109,7 +108,7 @@ img {
 }
 
 .slide.three {
-  background: url(../assets/sun.jpg) no-repeat center;
+  background: url(../assets/sceen.jpg) no-repeat center;
   transition: all 0.5s cubic-bezier(0.7, 0.44, 0.58, 1);
   z-index: 1;
 }
