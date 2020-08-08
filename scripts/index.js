@@ -17,26 +17,28 @@ const box6 = document.querySelector(".contact");
 
 const slideImage = (n) => {
   slides.forEach((slide, index) => {
-    slide.classList.add("hide-slide");
+    if (index < n) {
+      slide.classList.add("hide-slide");
+    }
 
     dots.forEach((dot, index) => {
       dot.classList.remove("active");
     });
     texts.forEach((text, index) => {
-      text.style.opacity = "0";
-      text.style.transform = "translateY(70px)";
+      if (index < n) {
+        text.classList.add("hide-text");
+      }
     });
     btns.forEach((btn, index) => {
-      btn.style.transform = "translateY(40px)";
-      btn.style.opacity = "0";
+      if (index < n) {
+        btn.classList.add("hide-btn");
+      }
     });
   });
   slides[n].classList.remove("hide-slide");
   dots[n].classList.add("active");
-  texts[n].style.opacity = "100";
-  texts[n].style.transform = "translateY(20px)";
-  btns[n].style.transform = "translateY(20px)";
-  btns[n].style.opacity = "100";
+  texts[n].classList.remove("hide-text");
+  btns[n].classList.remove("hide-btn");
 };
 
 prev.addEventListener("click", () => {
@@ -49,17 +51,35 @@ next.addEventListener("click", () => {
   slideImage(currentSlide);
 });
 
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
+dots.forEach((doti, i) => {
+  doti.addEventListener("click", () => {
     slideImage(i);
     currentSlide = i;
   });
 });
 
+document.addEventListener("wheel", (e) => {
+  if (e.deltaY <= 0) {
+    currentSlide <= 0 ? (currentSlide = slides.length - 1) : currentSlide--;
+    slideImage(currentSlide);
+  } else if (e.deltaY > 0) {
+    currentSlide >= slides.length - 1 ? (currentSlide = 0) : currentSlide++;
+    slideImage(currentSlide);
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 40) {
+    currentSlide >= slides.length - 1 ? (currentSlide = 0) : currentSlide++;
+    slideImage(currentSlide);
+  } else if (e.keyCode === 38) {
+    currentSlide <= 0 ? (currentSlide = slides.length - 1) : currentSlide--;
+    slideImage(currentSlide);
+  }
+});
 menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-  console.log("clicked");
   if (!showMenu) {
     hamburger.classList.add("open");
     showMenu = true;
