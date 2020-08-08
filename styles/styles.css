@@ -55,10 +55,10 @@ li {
 }
 
 img {
-  width: 120px;
+  width: 170px;
   height: 80px;
   object-fit: cover;
-  background: linear-gradient(to right, transparent);
+  color: #fff;
 }
 .slider-wrap {
   display: block;
@@ -96,19 +96,19 @@ img {
 }
 
 .slide.slide.one {
-  background: url(../assets/smoke.jpg) no-repeat center;
+  background: url(../assets/land.jpg) no-repeat center;
   transition: all 0.5s cubic-bezier(0.7, 0.44, 0.58, 1);
   z-index: 3;
 }
 
 .slide.slide.two {
-  background: url(../assets/lake.jpg) no-repeat center;
+  background: url(../assets/moonlight-5362539_1920.jpg) no-repeat center;
   transition: all 0.5s cubic-bezier(0.7, 0.44, 0.58, 1);
   z-index: 2;
 }
 
 .slide.slide.three {
-  background: url(../assets/sceen.jpg) no-repeat center;
+  background: url(../assets/moon-5338374_1920.jpg) no-repeat center;
   transition: all 0.5s cubic-bezier(0.7, 0.44, 0.58, 1);
   z-index: 1;
 }
@@ -117,11 +117,13 @@ img {
   height: 100vh;
   padding: 55px 105px;
   position: absolute;
+  width: 100vw;
   right: 0;
   top: 0;
   left: 0;
   bottom: 0;
   background-size: cover;
+  transition: all 0.5s cubic-bezier(0.7, 0.44, 0.58, 1);
 }
 
 .slide.hide-slide {
@@ -138,7 +140,7 @@ h2 {
   margin-top: 30px;
   word-spacing: 1px;
   opacity: 100;
-  transition: all 0.5s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1s;
+  transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1s;
   transform: translateY(20px);
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -146,8 +148,8 @@ h2 {
 
 h2.hide-text {
   opacity: 0;
-  transform: translateY(70px);
-  transition: all 0.7s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
+  transform: translateY(90px);
+  transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1.5s;
 }
 
 .btn {
@@ -160,7 +162,7 @@ h2.hide-text {
   margin-top: 30px;
   transform: translateY(20px);
   opacity: 100;
-  transition: all 0.7s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
+  transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1.5s;
   background-color: transparent;
   color: #fff;
   font-family: "Lato", sans-serif;
@@ -168,9 +170,9 @@ h2.hide-text {
 }
 
 .btn.hide-btn {
-  transform: translateY(40px);
+  transform: translateY(60px);
   opacity: 0;
-  transition: all 0.7s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
+  transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
 }
 
 .btn:hover {
