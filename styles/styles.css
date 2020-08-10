@@ -131,7 +131,7 @@ img {
   transition: all 0s cubic-bezier(0.7, 0.44, 0.58, 1);
 }
 
-h2 {
+.slide .text {
   line-height: 78px;
   font-weight: 600;
   font-size: 70px;
@@ -146,9 +146,9 @@ h2 {
   color: #fff;
 }
 
-h2.hide-text {
+.slide .hide-text {
   opacity: 0;
-  transform: translateY(90px);
+  transform: translateY(100px);
   transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 1.5s;
 }
 
@@ -170,7 +170,7 @@ h2.hide-text {
 }
 
 .btn.hide-btn {
-  transform: translateY(60px);
+  transform: translateY(70px);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.76, 0.91, 0.01, 0.14) 2s;
 }
